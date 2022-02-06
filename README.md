@@ -10,9 +10,8 @@ La aplicacion cuenta con algunas animaciones propias, y con algunas funciones ad
 
 espero que les guste :)
 
-Un poco de mi
--------------
-Redes Sociales:
+##Un poco de mi
+###Redes Sociales:
 - [Instagram](https://www.instagram.com/juan_palma/)
 - [Facebook](https://www.facebook.com/juan.palma.v)
 - [TikTok](https://www.tiktok.com/@juan.palma)
