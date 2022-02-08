@@ -431,9 +431,9 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # Prevent some of the mobile network providers from modifying the content of
 # your site: http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.9.5.
 
-# <IfModule mod_headers.c>
-#    Header set Cache-Control "no-transform"
-# </IfModule>
+ <IfModule mod_headers.c>
+    Header set Cache-Control "max-age=84600, public, no-transform"
+ </IfModule>
 
 # ------------------------------------------------------------------------------
 # | ETag removal                                                               |
@@ -443,11 +443,11 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 # be removed: http://developer.yahoo.com/performance/rules.html#etags.
 
 # `FileETag None` is not enough for every server.
-<IfModule mod_headers.c>
-    Header unset ETag
-</IfModule>
+#<IfModule mod_headers.c>
+    #Header unset ETag
+#</IfModule>
 
-FileETag None
+#FileETag None
 
 # ------------------------------------------------------------------------------
 # | Expires headers (for better cache control)                                 |
@@ -466,51 +466,51 @@ FileETag None
 <IfModule mod_expires.c>
 
     ExpiresActive on
-    ExpiresDefault                                      "access plus 0 seconds"
+    ExpiresDefault                                      "access plus 1 week"
 
   # CSS
-    ExpiresByType text/css                              "access plus 0 seconds"
+    ExpiresByType text/css                              "access plus 1 week"
 
   # Data interchange
-    ExpiresByType application/json                      "access plus 0 seconds"
-    ExpiresByType application/xml                       "access plus 0 seconds"
-    ExpiresByType text/xml                              "access plus 0 seconds"
+    ExpiresByType application/json                      "access plus 2 hour"
+    ExpiresByType application/xml                       "access plus 2 hour"
+    ExpiresByType text/xml                              "access plus 2 hour"
 
   # Favicon (cannot be renamed!)
-    ExpiresByType image/x-icon                          "access plus 0 seconds"
+    ExpiresByType image/x-icon                          "access plus 1 month"
 
   # HTML components (HTCs)
-    ExpiresByType text/x-component                      "access plus 0 seconds"
+    ExpiresByType text/x-component                      "access plus 24 hour"
 
   # HTML
-    ExpiresByType text/html                             "access plus 0 seconds"
+    ExpiresByType text/html                             "access plus 24 hour"
 
   # JavaScript
-    ExpiresByType application/javascript                "access plus 0 seconds"
+    ExpiresByType application/javascript                "access plus 1 week"
 
   # Manifest files
-    ExpiresByType application/x-web-app-manifest+json   "access plus 0 seconds"
-    ExpiresByType text/cache-manifest                   "access plus 0 seconds"
+    ExpiresByType application/x-web-app-manifest+json   "access plus 1 week"
+    ExpiresByType text/cache-manifest                   "access plus 1 week"
 
   # Media
-    ExpiresByType audio/ogg                             "access plus 0 seconds"
-    ExpiresByType image/gif                             "access plus 0 seconds"
-    ExpiresByType image/jpeg                            "access plus 0 seconds"
-    ExpiresByType image/png                             "access plus 0 seconds"
-    ExpiresByType video/mp4                             "access plus 0 seconds"
-    ExpiresByType video/ogg                             "access plus 0 seconds"
-    ExpiresByType video/webm                            "access plus 0 seconds"
+    ExpiresByType audio/ogg                             "access plus 1 week"
+    ExpiresByType image/gif                             "access plus 1 week"
+    ExpiresByType image/jpeg                            "access plus 1 week"
+    ExpiresByType image/png                             "access plus 1 week"
+    ExpiresByType video/mp4                             "access plus 1 week"
+    ExpiresByType video/ogg                             "access plus 1 week"
+    ExpiresByType video/webm                            "access plus 1 week"
 
   # Web feeds
-    ExpiresByType application/atom+xml                  "access plus 0 seconds"
-    ExpiresByType application/rss+xml                   "access plus 0 seconds"
+    ExpiresByType application/atom+xml                  "access plus 900 seconds"
+    ExpiresByType application/rss+xml                   "access plus 900 seconds"
 
   # Web fonts
-    ExpiresByType application/font-woff                 "access plus 0 seconds"
-    ExpiresByType application/vnd.ms-fontobject         "access plus 0 seconds"
-    ExpiresByType application/x-font-ttf                "access plus 0 seconds"
-    ExpiresByType font/opentype                         "access plus 0 seconds"
-    ExpiresByType image/svg+xml                         "access plus 0 seconds"
+    ExpiresByType application/font-woff                 "access plus 1 week"
+    ExpiresByType application/vnd.ms-fontobject         "access plus 1 week"
+    ExpiresByType application/x-font-ttf                "access plus 1 week"
+    ExpiresByType font/opentype                         "access plus 1 weeks"
+    ExpiresByType image/svg+xml                         "access plus 1 week"
 
 </IfModule>
 
