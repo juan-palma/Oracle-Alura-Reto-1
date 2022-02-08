@@ -25,33 +25,39 @@
 		
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" id="cssMain" href="css/main.css" />
-		<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,600,900&display=swap' rel='stylesheet' type='text/css' async="true">
+		<link rel="preload" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,600,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+		<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:100,300,400,600,900&display=swap"></noscript>
+<!-- 		<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,600,900&display=swap' rel='stylesheet' type='text/css'> -->
 		<!--[if lte IE 8]> <link rel="stylesheet" href="css/resetIE.css" /> <![endif]-->
 		
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js" integrity="sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-		<script src="js/librerias/require.js"></script>
+		<script defer src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js"
+			integrity="sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA=="
+			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+		<script defer data-main="js/owner/main" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"
+			integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg=="
+			crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		
 		<meta name="theme-color" content="#282b30"/>
 		
 		<meta itemprop="name" content="Alura Reto - Encriptador - Juan Palma" />
 		<meta itemprop="description" content="Primer reto de los cursos de Alura, crearemos un esriptador de texto que ocultar o revertir los textos que se introduzcan, hecho por Juan Palma" />
-		<meta itemprop="image" content="URL_IMAGEN_WEB" />
+		<meta itemprop="image" content="https://encriptador.idalibre.com/img/facebook_web_img_article.jpg" />
 		
 		<meta property="og:type" content="WEBSITE" />
-		<meta property="og:url" content="URL_SITIO_WEB" />
-		<meta property="og:site_name" content="NOMBRE_SITIO" />
+		<meta property="og:url" content="https://encriptador.idalibre.com/" />
+		<meta property="og:site_name" content="Encriptador - Juan Palma" />
 				
 		<meta property="og:title" content="Alura Reto - Encriptador - Juan Palma" />
 		<meta property="og:description" content="Primer reto de los cursos de Alura, crearemos un esriptador de texto que ocultar o revertir los textos que se introduzcan, hecho por Juan Palma" />
-		<meta property="og:image" content="URL_IMAGEN_WEB" />
+		<meta property="og:image" content="https://encriptador.idalibre.com/img/facebook_web_img_article.jpg" />
 		<meta property="og:image:type" content="image/jpg" />
 		
 		<meta name="twitter:card" content="summary_large_image" />
-		<meta name="twitter:site" content="@CUENTA_TWITTER" />
+		<meta name="twitter:site" content="@juan_el_compa" />
 		<meta name="twitter:title" content="Alura Reto - Encriptador - Juan Palma" />
 		<meta name="twitter:description" content="Primer reto de los cursos de Alura, crearemos un esriptador de texto que ocultar o revertir los textos que se introduzcan, hecho por Juan Palma" />
-		<meta name="twitter:image:src" content="URL_IMAGEN_WEB" />
-		<meta name="twitter:domain" content="DOMINIO" />
+		<meta name="twitter:image:src" content="https://encriptador.idalibre.com/img/facebook_web_img_article.jpg" />
+		<meta name="twitter:domain" content="encriptador.idalibre.com/" />
 		
 		<meta name="author" content="Juan Palma - ID.A libre">
 		<link type="text/plain" rel="author" href="humans.txt" />
@@ -98,8 +104,5 @@
 		</main>
 		
 		
-		
-		<!-- Carga de JS !!.. -->
-		<script src="js/owner/main.js"></script>
 	</body>
 </html>
