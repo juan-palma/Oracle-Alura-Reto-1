@@ -158,6 +158,9 @@ main, footer, header, aside, section, article, figure, figcaption, q, cite, bloc
 
 
 
+
+
+
 /* ==========================================================================
 	Estilos visiales para elementos GENERALES
 ========================================================================== */
@@ -405,6 +408,13 @@ input[type="button"]:hover{
 	justify-content: center;
 	align-items: center;
 }
+	#titulo, #titulo h1{
+		margin-bottom: 0px;
+		padding-bottom: 0px;
+	}
+	#titulo{
+		margin-bottom: -1.5em;
+	}
 	#entradas, #salidas{
 		width: 50%;
 		height: 100vh;
@@ -423,6 +433,14 @@ input[type="button"]:hover{
 			text-align: right;
 			position: relative;
 		}
+			#respuestaH{
+				-webkit-transition: none;
+				-moz-transition: none;
+				-o-transition: none;
+				-ms-transition: none;
+				transition: none;
+				box-shadow: none;
+			}
 			#msgInput {
 				width: 100%;
 				height: auto;
@@ -603,8 +621,51 @@ input[type="button"]:hover{
 /* ==========================================================================
 	Media Queries
 ========================================================================== */
-@media only screen and (max-width: 800px) {
-
+@media only screen and (max-width: 846px) {
+	:root{
+		--margenAncho: 90%;
+		--margenPadding: 2em;
+	}
+	h1 {
+	    font-size: 9vw;
+	}
+	#msgInput, #msgMas{
+		font-size: 66%;
+	}
+	#titulo {
+	    margin-bottom: -1.5em;
+	    margin-top: 44px;
+	}
+	#mainContainer{
+		flex-direction: column;
+		flex-wrap: wrap;
+		overflow: hidden;
+	}
+		#entradas, #salidas {
+		    width: 100%;
+		    height: auto;
+		    flex: 1 0 0;
+		}
+		#salidas{
+			flex: none;
+			padding: 4rem 0;
+		}
+			#salida{
+				min-height: 27vh;
+			}
+			#masOpciones {
+			    margin-top: 0px;
+			    padding-top: 0px;
+			}
+			#candado{
+				position: absolute;
+			    transform: scale(0.6);
+			    top: -24vh;
+			    left: 0vw;
+			}
+				#candado svg g g:first-child g path {
+				    fill: #fff;
+				}
 }
 
 
@@ -635,7 +696,11 @@ input[type="button"]:hover{
 	Media Queries
 ========================================================================== */
 @media only screen and (max-width: 480px) {
-
+	#candado{
+	    transform: scale(0.5);
+	    top: -10vh;
+	    left: -26vw;
+	}
 }
 
 

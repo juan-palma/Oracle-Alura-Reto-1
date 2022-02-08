@@ -25,7 +25,7 @@
 		
 		<link rel="stylesheet" href="css/reset.css" />
 		<link rel="stylesheet" id="cssMain" href="css/main.css" />
-		<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,600,900&display=swap' rel='stylesheet' type='text/css'>
+		<link href='https://fonts.googleapis.com/css?family=Lato:100,300,400,600,900&display=swap' rel='stylesheet' type='text/css' async="true">
 		<!--[if lte IE 8]> <link rel="stylesheet" href="css/resetIE.css" /> <![endif]-->
 		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.8.1/lottie.min.js" integrity="sha512-V1YyTKZJrzJNhcKthpNAaohFXBnu5K9j7Qiz6gv1knFuf13TW/3vpgVVhJu9fvbdW8lb5J6czIhD4fWK2iHKXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -63,13 +63,13 @@
 		<main id="mainContainer">
 			<div id="entradas">
 				<div id="idalibreLogo"><a href="https://idalibre.com" target="_blank" rel="noreferrer"><img alt="ID.A libre - Logo" title="ID.A libre" src="img/idalibre-logo.svg" width="58" height="58" /></a></div>
+				<header id="titulo" class="margen"><h1>{Des}Encriptador</h1></header>
 				<form id="formEnc" class="margen" method="post" enctype="text/plain">
 					<label for="respuestaH" class="desaparece">Texto de respuesta del encriptador</label>
 					<input type="text" id="respuestaH" class="desaparece" value=""></input>
 					<div class="neutro">
-						<h1>{Des}Encriptador</h1>
 						<label for="texto" class="desaparece"></label>
-						<input type="text" id="texto" placeholder="Intoducir texto a procesar..."></input>
+						<input type="text" id="texto" placeholder="Intoducir texto a procesar..." value="" autocomplete="off"></input>
 						<div id="msgInput" class="animar"></div>
 						<input type="button" id="btnEncriptar" class="animar" value="Encriptar"></input>
 						<input type="button" id="btnDesencriptar" class="animar" value="Desencriptar"></input>
