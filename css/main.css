@@ -648,10 +648,10 @@ input[type="button"]:hover{
 		}
 		#salidas{
 			flex: none;
-			padding: 4rem 0;
 		}
 			#salida{
 				min-height: 27vh;
+				padding: 4rem 0;
 			}
 			#masOpciones {
 			    margin-top: 0px;
